@@ -1,13 +1,37 @@
 {% extends "base.html" %}
 
 {% block header %}
-<link rel="stylesheet" type="text/css" href="../static/css/index.css">
-<script src="https://use.fontawesome.com/3673336820.js"></script>
 {% endblock %}
 
 {% block content %}
-<h2>Alan</h2>
-<hr>
-<div id="output"></div>
-<div class="line" id="input-line">you$ &zwnj;<span class="yellow" id="input" contenteditable="true"></span></div>
+
+	<div class="page-header">
+	  <h1 class="head">Example page header <small>Subtext for header</small></h1>
+	</div>
+	<div class="container">
+ 
+            
+  <table class="table">
+    <thead>
+      <tr class="table-head">
+        <th class="head-design"><h1>Room</h1></th>
+        <th class="head-design"><h1>Time Stamp</h1></th>
+        <th class="head-design"><h1>Frequency</h1></th>
+        <th class="head-design"><h1>Authorization</h1></th>
+      
+      </tr>
+    </thead>
+    <tbody>
+    	{% for row in analysis %}
+		<td>
+			<td class="table-design">{{ row.room }}</td>
+			<td class="table-design">{{ row.timestamp }}</td>
+			<td class="table-design">{{ row.frequency }}</td>
+			<td class="table-design">{{ row.authorization }}</td>
+		</td>
+      	{% endfor %}
+    </tbody>
+  </table>
+</div>
+
 {% endblock %}
