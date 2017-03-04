@@ -1,5 +1,6 @@
 # Others
 dev_config.cfg
+.DS_Store
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
